@@ -1,12 +1,12 @@
-package br.edu.unicesumar.aula.service;
+package br.edu.unicesumar.escoladeti.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.edu.unicesumar.aula.domain.Curso;
-import br.edu.unicesumar.aula.repository.CursoRepository;
+import br.edu.unicesumar.escoladeti.domain.Curso;
+import br.edu.unicesumar.escoladeti.repository.CursoRepository;
 
 @Service
 public class CursoService {

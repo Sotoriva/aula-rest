@@ -1,4 +1,4 @@
-package br.edu.unicesumar.aula.domain;
+package br.edu.unicesumar.escoladeti.domain;
 
 import java.time.LocalDate;
 

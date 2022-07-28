@@ -1,13 +1,13 @@
-package br.edu.unicesumar.aula;
+package br.edu.unicesumar.escoladeti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AulaApplication {
+public class EscoladetiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AulaApplication.class, args);	
+		SpringApplication.run(EscoladetiApplication.class, args);	
 	}
 
 }

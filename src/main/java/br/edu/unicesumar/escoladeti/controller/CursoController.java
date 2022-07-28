@@ -1,4 +1,4 @@
-package br.edu.unicesumar.aula.controller;
+package br.edu.unicesumar.escoladeti.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.unicesumar.aula.domain.Curso;
-import br.edu.unicesumar.aula.repository.CursoRepository;
+import br.edu.unicesumar.escoladeti.domain.Curso;
+import br.edu.unicesumar.escoladeti.repository.CursoRepository;
 
 @RestController
 @RequestMapping("/curso")

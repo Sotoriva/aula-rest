@@ -1,4 +1,4 @@
-# aula-rest
+# escoladeti-rest
 
 chmod +x mvnw
 

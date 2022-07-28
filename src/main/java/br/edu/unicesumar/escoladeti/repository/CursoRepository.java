@@ -1,8 +1,8 @@
-package br.edu.unicesumar.aula.repository;
+package br.edu.unicesumar.escoladeti.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.edu.unicesumar.aula.domain.Curso;
+import br.edu.unicesumar.escoladeti.domain.Curso;
 
 public interface CursoRepository extends JpaRepository<Curso, Long> {
 
