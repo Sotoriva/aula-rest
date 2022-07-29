@@ -5,6 +5,33 @@
 		}
 	],
 	"settings": {
-		"java.configuration.updateBuildConfiguration": "interactive"
+		"java.configuration.updateBuildConfiguration": "automatic"
+	},
+	"extensions": {
+		"recommendations": [
+			"GabrielBB.vscode-lombok",
+			"Pivotal.vscode-boot-dev-pack",
+			"Pivotal.vscode-spring-boot",
+			"VisualStudioExptTeam.vscodeintellicode",
+			"aaron-bond.better-comments",
+			"alefragnani.project-manager",
+			"christian-kohler.path-intellisense",
+			"eamodio.gitlens",
+			"MS-CEINTL.vscode-language-pack-pt-BR",
+			"PKief.material-icon-theme",
+			"redhat.fabric8-analytics",
+			"redhat.java",
+			"redhat.vscode-xml",
+			"rocketseat.theme-omni",
+			"vscjava.vscode-gradle",
+			"vscjava.vscode-java-debug",
+			"vscjava.vscode-java-dependency",
+			"vscjava.vscode-java-pack",
+			"vscjava.vscode-java-test",
+			"vscjava.vscode-maven",
+			"vscjava.vscode-spring-boot-dashboard",
+			"vscjava.vscode-spring-initializr",
+			"WakaTime.vscode-wakatime",
+		],
 	}
 }
