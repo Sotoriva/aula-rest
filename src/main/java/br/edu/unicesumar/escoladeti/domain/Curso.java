@@ -1,11 +1,17 @@
 package br.edu.unicesumar.escoladeti.domain;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,11 +24,18 @@ import lombok.NoArgsConstructor;
 public class Curso {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "my_seq")
+    @SequenceGenerator(name = "my_seq", sequenceName = "seq_curso_id", allocationSize = 1)
     private Long id;
     private String nome;
-    private Long cargaHorariaMinima;
-    private Long cargaHorariaMaxima;
+    @Column(name = "carga_horaria_minima")
+    private int cargaHorariaMinima;
+    @Column(name = "carga_horaria_maxima")
+    private int cargaHorariaMaxima;
+    @Column(name = "aprovado_em")
     private LocalDate aprovadoEm;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "curso_id")
+    private List<Disciplina> disciplinas = new ArrayList<>();
 
 }

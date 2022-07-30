@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+  <changeSet id="20220728" author="João Sotoriva">
+
+    <createTable tableName="disciplina">
+      <column name="id" type="bigint">
+        <constraints primaryKey="true" primaryKeyName="disciplina_id_pk" />
+      </column>
+      <column name="nome" type="varchar(250)" />
+      <column name="carga_horaria" type="int" />
+      <column name="tipo" type="varchar(7)" />
+      <column name="modelo" type="varchar(10)" />
+      <column name="curso_id" type="bigint" />
+    </createTable>
+    <addAutoIncrement tableName="curso" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+    <addAutoIncrement tableName="disciplina" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+    <createSequence sequenceName="hibernate_sequence" incrementBy="1" startValue="1" />
+
+    <addForeignKeyConstraint baseTableName="disciplina" baseColumnNames="curso_id" constraintName="disciplina_curso_id_fk" referencedTableName="curso" referencedColumnNames="id" />
+
+  </changeSet>
+
+</databaseChangeLog>

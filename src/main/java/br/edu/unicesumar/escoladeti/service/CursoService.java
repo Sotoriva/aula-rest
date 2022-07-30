@@ -1,5 +1,7 @@
 package br.edu.unicesumar.escoladeti.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,11 +15,23 @@ public class CursoService {
   @Autowired
   CursoRepository cursoRepository;
   
-  public Page<Curso> buscarCursos(Pageable page) {
-    return cursoRepository.findAll(page);
-  }
-
-  public Curso criaCurso(Curso curso) {
-    return cursoRepository.save(curso);
-  }
+  public Page<Curso> buscarCursoPaginado(Pageable pageable) {
+		return cursoRepository.findAll(pageable);
+	}
+	
+	public Optional<Curso> obterCursoPorId(Long id) {
+		return cursoRepository.findById(id);
+	}
+	
+	public Curso salvarCurso(Curso curso) {
+		return cursoRepository.save(curso);
+	}
+	
+	public Curso atualizarCurso(Curso curso) {
+		return cursoRepository.save(curso);
+	}
+	
+	public void deletarCursoPorId(Long id) {
+		cursoRepository.deleteById(id);
+	}
 }

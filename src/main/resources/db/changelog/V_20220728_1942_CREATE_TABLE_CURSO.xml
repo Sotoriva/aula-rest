@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+  <changeSet id="0" author="joao.sotoriva">
+    <createTable tableName="curso">
+      <column name="id" type="bigint">
+        <constraints primaryKey="true" primaryKeyName="curso_id_pk" />
+      </column>
+      <column name="nome" type="varchar(250)" />
+      <column name="carga_horaria_minima" type="int" />
+      <column name="carga_horaria_maxima" type="int" />
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>
